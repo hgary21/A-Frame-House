@@ -1,0 +1,65 @@
+<html>
+
+<head>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-assets>
+			<!-- https://hdrihaven.com/hdri/?c=clear&h=ulmer_muenster -->
+			<img id="sky" src="assets/sky.jpg">
+
+			<!-- https://seamless-pixels.blogspot.com/2015/04/green-lush-grass-texture.html -->
+			<img id="grass" src="assets/grass.jpg">
+
+			<!-- https://libreshot.com/brick-wall-texture-2/ -->
+			<img id="brick" src="assets/brick.jpg">
+
+			<!-- https://roofandbuildingservice.com.au/wp-content/uploads/2018/05/Tiled-roof-repair-and-maintenance.jpg -->
+			<img id="roof" src="assets/roof.jpg">
+
+			<!-- https://theconversation.com/open-windows-to-help-stop-the-spread-of-coronavirus-advises-architectural-engineer-142579 -->
+			<img id="window" src="assets/window.jpg">
+
+			<!-- https://www.upperdublin.net/product/disposal-door-wood/ -->
+			<img id="door" src="assets/door.jpg">
+		</a-assets>
+
+		<a-entity position="0 0 -4">
+			<a-box position="0 4 -10" rotation="0 0 0" width="10" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="3 4 -2" rotation="0 0 0" width="4" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="-3 4 -2" rotation="0 0 0" width="4" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="0 6 -2" rotation="0 0 0" width="2" height="4" depth="0.1" src="#brick" repeat="1 2">
+			</a-box>
+
+			<a-box position="5 4 -6" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="-5 4 -6" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+
+			<a-triangle position="0 8 -2" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#brick" repeat="4 3"> </a-triangle>
+			<a-triangle position="0 8 -10" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#brick" repeat="4 3"> </a-triangle>
+
+			<a-box position="5 8 -6" rotation="0 0 -45" width="14.1421356238" height="0.1" depth="12" src="#roof"
+				color="#ABABAB"> </a-box>
+			<a-box position="-5 8 -6" rotation="0 0 45" width="14.1421356238" height="0.1" depth="12" src="#roof"
+				color="#ABABAB"> </a-box>
+
+			<a-box position="-3 4 -2" width="2" height="2" depth="0.2" src="#window"></a-box>
+			<a-box position="3 4 -2" width="2" height="2" depth="0.2" src="#window"></a-box>
+
+			<a-box position="-0.5 2 -1.1" rotation="0 -60 0" width="2" height="4" depth="0.1" src="#door"></a-box>
+
+		</a-entity>
+		<a-box position="0 0 -10" width="32" height="0.1" depth="24" src="#grass" repeat="10 10"> </a-box>
+		<a-sky src="#sky"></a-sky>
+	</a-scene>
+</body>
+
+</html>
